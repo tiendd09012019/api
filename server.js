@@ -33,7 +33,8 @@ server.use((req, res, next) => {
     if (isAuthenticated(req)) {
       next();
     } else {
-      res.sendStatus(401);
+      next();
+      //res.sendStatus(401);
     }
   } else {
     next();
